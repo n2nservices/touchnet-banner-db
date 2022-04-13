@@ -1,0 +1,8 @@
+Audit Trail - TouchNet - Georgian College objects
+
+1) Date: 04/13/2022
+   Audit Trail No.: HEARTLAND_04132022_q_v_0.1
+   User: Shalin Shah
+   Ticket No: CSII-32829
+   Reason: Initial commit for scheduling and added the Georgian college Views
+
