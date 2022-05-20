@@ -3,7 +3,7 @@
 --------------------------------------------------------
 
   CREATE MATERIALIZED VIEW "HEARTLAND"."N_MV_STUDENT" REFRESH FORCE ON DEMAND
-    AS SELECT * FROM STUDENTS
+    AS SELECT * FROM HEARTLAND.STUDENTS
 --******************************************************************************
 -- N2N Services Inc
 --

@@ -3,7 +3,7 @@
 --------------------------------------------------------
 
   CREATE MATERIALIZED VIEW "HEARTLAND"."N_MV_ATHLETICS" REFRESH FORCE ON DEMAND
-    AS SELECT * FROM ATHLETICS
+    AS SELECT * FROM HEARTLAND.ATHLETICS
 --******************************************************************************
 -- N2N Services Inc
 --

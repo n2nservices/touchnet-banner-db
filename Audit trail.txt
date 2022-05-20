@@ -12,4 +12,9 @@ Audit Trail - TouchNet - Georgian College objects
    Ticket No: CSII-33344 & CSII-33769
    Reason: Committed the Athletic and Students objects
 -------------------------------------------------------------------------------
-
+3) Date: 05/19/2022
+   Audit Trail No.: HEARTLAND_05192022_q_v_0.3
+   User: Shalin Shah
+   Ticket No: CSII-34042
+   Reason: Added the grnat to materialized view and create table 
+-------------------------------------------------------------------------------
