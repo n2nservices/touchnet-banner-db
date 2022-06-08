@@ -18,3 +18,9 @@ Audit Trail - TouchNet - Georgian College objects
    Ticket No: CSII-34042
    Reason: Added the grnat to materialized view and create table 
 -------------------------------------------------------------------------------
+4) Date: 06/08/2022
+   Audit Trail No.: HEARTLAND_06082022_q_v_0.4
+   User: Shalin Shah
+   Ticket No: CSII-35323 & CSII-35322
+   Reason: Committed the Employees and Buspass objects
+-------------------------------------------------------------------------------
