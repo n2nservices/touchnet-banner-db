@@ -17,12 +17,18 @@
     end if;
   
     if upper(trim(p_mv_name)) = 'ATHLETICS' or
-       upper(trim(p_mv_name)) = 'STUDENTS' then
+       upper(trim(p_mv_name)) = 'STUDENTS' or
+	   upper(trim(p_mv_name)) = 'EMPLOYEES' or
+       upper(trim(p_mv_name)) = 'BUSPASS' then
     
       if upper(trim(p_mv_name)) = 'ATHLETICS' then
         dbms_mview.refresh('N_MV_ATHLETICS', 'C');
       elsif upper(trim(p_mv_name)) = 'STUDENTS' then
         dbms_mview.refresh('N_MV_STUDENT', 'C');
+	  elsif upper(trim(p_mv_name)) = 'BUSPASS' then
+        dbms_mview.refresh('N_MV_BUSPASS', 'C');
+	  elsif upper(trim(p_mv_name)) = 'EMPLOYEES' then
+        dbms_mview.refresh('N_MV_EMPLOYEE', 'C');
       end if;
     
       p_status_msg := 'Refresh successfully.';
