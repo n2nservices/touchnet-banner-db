@@ -4,8 +4,8 @@
 
   CREATE MATERIALIZED VIEW "HEARTLAND"."N_MV_BUSPASS" REFRESH FORCE ON DEMAND
     AS SELECT * FROM HEARTLAND.BUSPASS_STUD where
-			sysdate between buspass_startdate
-				and buspass_expiredate
+			trunc(sysdate) between trunc(buspass_startdate)
+				and trunc(buspass_expiredate)
 --******************************************************************************
 -- N2N Services Inc
 --

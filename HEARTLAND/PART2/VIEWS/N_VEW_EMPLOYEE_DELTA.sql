@@ -10,7 +10,7 @@ select id as ID,
        emailaddress as Email,
        lastmodifieddate as LastModifiedDate,
        'Updated' Status
-  from heartland.students t
+  from heartland.employees t
 minus
 select t1.id,
        t1.firstname,
@@ -19,7 +19,7 @@ select t1.id,
        t1.emailaddress,
        t1.lastmodifieddate,
        'Updated' Status
-  from heartland.n_mv_student t1
+  from heartland.n_mv_employee t1
 union
 select id as ID,
        firstname as FirstName,
@@ -28,7 +28,7 @@ select id as ID,
        emailaddress as Email,
        lastmodifieddate as LastModifiedDate,
        'Deleted' Status
-  from heartland.n_mv_student t
+  from heartland.n_mv_employee t
 minus
 select t1.id,
        t1.firstname,
@@ -37,7 +37,7 @@ select t1.id,
        t1.emailaddress,
        t1.lastmodifieddate,
        'Deleted' Status
-  from heartland.students t1
+  from heartland.employees t1
 --******************************************************************************
 -- N2N Services Inc
 --
