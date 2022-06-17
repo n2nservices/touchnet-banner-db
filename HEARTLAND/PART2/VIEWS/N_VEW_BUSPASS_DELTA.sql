@@ -2,7 +2,7 @@
 --  DDL for View N_VEW_BUSPASS_DELTA
 --------------------------------------------------------
 
-CREATE OR REPLACE FORCE VIEW "HEARTLAND"."N_VEW_BUSPASS_DELTA" ("ID", "FIRSTNAME", "LASTNAME", "MIDDLENAME", "CAMPUS", "GEORGIANEMAIL", "ELIGIBLE", "COURSESTARTDATE", "COURSEENDDATE", "BUSPASSSTARTDATE", " BUSPASSEXPIREDATE", "STATUS") AS 
+CREATE OR REPLACE FORCE VIEW "HEARTLAND"."N_VEW_BUSPASS_DELTA" ("ID", "FIRSTNAME", "LASTNAME", "MIDDLENAME", "CAMPUS", "GEORGIANEMAIL", "ELIGIBLE", "COURSESTARTDATE", "COURSEENDDATE", "BUSPASSSTARTDATE", "BUSPASSEXPIREDATE", "STATUS") AS 
 select id as ID,
        firstname as FirstName,
        lastname as LastName,
@@ -16,7 +16,7 @@ select id as ID,
 	   buspass_expiredate as BuspassExpireDate,
        'Updated' Status
   from heartland.buspass_stud t
-  where sysdate between buspass_startdate and buspass_expiredate
+  where trunc(sysdate) between trunc(buspass_startdate) and trunc(buspass_expiredate)
 minus
 select t1.id,
        t1.firstname,
@@ -59,7 +59,7 @@ select t1.id,
 	   t1.buspass_expiredate,
        'Deleted' Status
   from heartland.buspass_stud t1
-  where sysdate between t1.buspass_startdate and t1.buspass_expiredate
+  where trunc(sysdate) between trunc(t1.buspass_startdate) and trunc(t1.buspass_expiredate)
 --******************************************************************************
 -- N2N Services Inc
 --
