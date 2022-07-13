@@ -24,3 +24,11 @@ Audit Trail - TouchNet - Georgian College objects
    Ticket No: CSII-35323 & CSII-35322
    Reason: Committed the Employees and Buspass objects
 -------------------------------------------------------------------------------
+5) Date: 07/13/2022
+   Audit Trail No.: HEARTLAND_07132022_q_v_0.5
+   User: Shalin Shah
+   Ticket No: CSII-37068
+   Reason: Changed the logic in the N_VEW_STUDENT_DELTA view to populate the 'Updated' records
+-------------------------------------------------------------------------------
+
+
