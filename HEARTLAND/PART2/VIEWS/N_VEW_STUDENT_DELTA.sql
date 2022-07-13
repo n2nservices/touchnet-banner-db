@@ -12,7 +12,10 @@ select id as ID,
        major as Major,
        'Updated' Status
   from heartland.students t
-minus
+ where lastmodifieddate >= (select process_starttime 
+							 from heartland.n_scheduler 
+						    where job_name = 'STUDENT') 
+/*  minus
 select t1.id,
        t1.firstname,
        t1.lastname,
@@ -21,7 +24,7 @@ select t1.id,
        t1.georgianemailaddress,
        t1.major,
        'Updated' Status
-  from heartland.n_mv_student t1
+  from heartland.n_mv_student t1 */
 union
 select id as ID,
        firstname as FirstName,
@@ -62,5 +65,10 @@ select t1.id,
 -- Date: 05/11/2022
 -- User(s): Shalin Shah
 -- Reason for Change: Initial development.
+-- -----------
+-- Trail NO: 2
+-- Date: 07/13/2022
+-- User(s): Shalin Shah
+-- Reason for Change: Changed the logic to get the 'Updated' records
 --******************************************************************************
 ;
